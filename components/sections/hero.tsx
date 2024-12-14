@@ -1,12 +1,13 @@
 import React from "react";
 import Link from "next/link";
-import Header from "../globals/header";
+import Navigation from "../globals/navigation";
 
 const Hero = () => {
   return (
     <div className="bg-[url('/assets/images/hero_1.jpg.webp')] h-[600px] bg-cover bg-center bg-black/50 bg-blend-overlay ">
       {" "}
-      <Header />
+      {/* <Header /> */}
+      <Navigation />
       <section className="mt-36 text-white">
         <div className="flex flex-col items-center text-center space-y-6 py-8">
           <h1 className="text-5xl sm:text-7xl md:8xl font-bold   ">

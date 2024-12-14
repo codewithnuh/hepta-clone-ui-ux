@@ -20,8 +20,8 @@ export function CarouselSection() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.2 });
   return (
-    <section ref={ref}>
-      <div className="container flex items-center flex-col justify-center">
+    <section ref={ref} className="pt-16">
+      <div className="container flex items-center flex-col justify-center overflow-clip">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
@@ -40,7 +40,7 @@ export function CarouselSection() {
         </motion.div>
         <Carousel
           plugins={[plugin.current]}
-          className="w-full max-w-2xl"
+          className="w-full max-w-4xl my-12"
           onMouseEnter={plugin.current.stop}
           onMouseLeave={plugin.current.reset}
         >
@@ -51,8 +51,8 @@ export function CarouselSection() {
                   <Image
                     src={img.imgUrl}
                     alt="slider"
-                    width={500}
-                    height={500}
+                    width={1000}
+                    height={1000}
                   />
                 </div>
               </CarouselItem>

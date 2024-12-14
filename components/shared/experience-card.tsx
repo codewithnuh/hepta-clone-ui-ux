@@ -5,12 +5,6 @@ import { Card, CardDescription, CardHeader, CardTitle } from "../ui/card";
 import Image from "next/image";
 import { motion, useInView } from "framer-motion";
 
-interface ExperienceCardProps {
-  iconUrl: string;
-  title: string;
-  description: string;
-}
-
 const ExperienceCard = ({
   iconUrl,
   title,
