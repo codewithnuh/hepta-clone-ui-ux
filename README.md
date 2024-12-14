@@ -67,7 +67,7 @@ git clone https://github.com/codewithnuh/hepta-clone-ui-ux.git
 
 ### **Install Dependencies**
 ```bash
-npm install --verbose
+npm install --legacy-peer-deps
 ```
 
 ### **Run the Application**
