@@ -23,9 +23,31 @@ const poppins = localFont({
   ],
   variable: "--font-poppins",
 });
+
 export const metadata: Metadata = {
   title: "Hepta - Clone UI UX",
   description: "Clone of Hepta UI UX",
+  openGraph: {
+    title: "Hepta - Clone UI UX",
+    description: "A beautiful and responsive UI/UX clone of Hepta.",
+    url: "https://hepta-clone-ui-ux.vercel.app/",
+    siteName: "Hepta Clone",
+    images: [
+      {
+        url: "https://hepta-clone-ui-ux.vercel.app/assets/images/og-img.png",
+        height: 630,
+        alt: "Hepta Clone Preview",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Hepta - Clone UI UX",
+    description: "A beautiful and responsive UI/UX clone of Hepta.",
+    images: ["https://hepta-clone-ui-ux.vercel.app/assets/images/og-img.png"], // Replace with the URL of your Open Graph image
+  },
 };
 
 export default function RootLayout({
