@@ -1,4 +1,5 @@
 import About from "@/components/sections/about";
+import { CarouselSection } from "@/components/sections/corousel";
 import Destination from "@/components/sections/destination";
 import Experience from "@/components/sections/experience";
 import Hero from "@/components/sections/hero";
@@ -11,6 +12,7 @@ const HomePage = () => {
       <Hero />
       <About />
       <Experience />
+      <CarouselSection />
       <Testimonial />
       <Destination />
     </div>

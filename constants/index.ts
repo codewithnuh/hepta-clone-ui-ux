@@ -75,3 +75,20 @@ export const DESTINATIONS = [
     reviews: 45303,
   },
 ];
+export const SLIDER_IMAGES = [
+  {
+    imgUrl: "/assets/images/slider-1.jpg.webp",
+  },
+  {
+    imgUrl: "/assets/images/slider-2.jpg.webp",
+  },
+  {
+    imgUrl: "/assets/images/slider-3.jpg.webp",
+  },
+  {
+    imgUrl: "/assets/images/slider-4.jpg.webp",
+  },
+  {
+    imgUrl: "/assets/images/slider-5.jpg.webp",
+  },
+];

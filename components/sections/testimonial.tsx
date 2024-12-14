@@ -1,4 +1,7 @@
+"use client";
 import { AnimatedTestimonials } from "@/components/ui/animated-testimonials";
+import { motion, useInView } from "framer-motion";
+import React, { useRef } from "react";
 
 export function Testimonial() {
   const testimonials = [
@@ -21,10 +24,21 @@ export function Testimonial() {
       src: "/assets/images/person_3.jpg.webp",
     },
   ];
+
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true });
+
   return (
-    <div className="py-10 mt-14 ">
+    <div className="py-10 mt-14" ref={ref}>
       <section>
-        <h2 className="text-6xl font-semibold text-center">Happy Clients</h2>
+        <motion.h2
+          className="text-6xl font-semibold text-center"
+          initial={{ opacity: 0, y: 20 }}
+          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+        >
+          Happy Clients
+        </motion.h2>
         <AnimatedTestimonials testimonials={testimonials} />;
       </section>
     </div>
