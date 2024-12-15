@@ -3,8 +3,13 @@
 import React from "react";
 import Image from "next/image";
 import { PlayCircleIcon } from "lucide-react";
-import { Button } from "../ui/button";
 import { motion, useInView } from "framer-motion";
+import {
+  Dialog,
+  DialogTitle,
+  DialogTrigger,
+  DialogContent,
+} from "../ui/dialog";
 
 const About = () => {
   const ref = React.useRef(null);
@@ -91,12 +96,23 @@ const About = () => {
               className="flex items-center space-x-2"
             >
               <PlayCircleIcon className="w-8 h-8 text-teal-400" />
-              <Button
-                className="text-2xl font-bold text-teal-400 hover:text-teal-600 hover:bg-transparent"
-                variant={"ghost"}
-              >
-                Watch Video
-              </Button>
+              <Dialog>
+                <DialogTrigger>Watch Video</DialogTrigger>
+                <DialogTitle className="sr-only">Video</DialogTitle>
+                <DialogContent>
+                  <div className="aspect-video mt-4 ">
+                    <iframe
+                      src="https://www.youtube.com/embed/Sklc_fQBmcs?si=NHmaUgoacw5QOPkn"
+                      title="YouTube video player"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerPolicy="strict-origin-when-cross-origin"
+                      allowFullScreen
+                      className="w-full h-full"
+                    ></iframe>
+                  </div>
+                </DialogContent>
+              </Dialog>
             </motion.div>
           </div>
         </div>
