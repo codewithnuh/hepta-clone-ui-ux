@@ -20,7 +20,7 @@ export function CarouselSection() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.2 });
   return (
-    <section ref={ref} className="pt-16">
+    <section ref={ref} className="top-40 sm:top-60 relative z-20">
       <div className="container flex items-center flex-col justify-center overflow-clip">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

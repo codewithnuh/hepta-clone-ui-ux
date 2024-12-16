@@ -17,22 +17,32 @@ const RecentBlogPosts = () => {
   };
 
   return (
-    <section ref={ref} className="relative my-10 pb-10 pt-40 bg-teal-600 ">
+    <section ref={ref} className="relative  pb-20 pt-48 -z-20 bg-teal-600 ">
       {/* Wavy Background */}
-      <div className="absolute inset-0 -z-10 -top-[55rem]">
-        <svg
-          className="w-full h-full  text-teal-600"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 1440 320"
-          fill="currentColor"
-        >
-          <path
-            fillOpacity="1"
-            d="M0,96L60,128C120,160,240,224,360,245.3C480,267,600,245,720,240C840,235,960,245,1080,234.7C1200,224,1320,192,1380,176L1440,160L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
-          ></path>
-        </svg>
-      </div>
-
+      {/* <svg
+        className="absolute top-0 fill-white"
+        data-name="Layer 1"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1200 120"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M1200 120L0 16.48 0 0 1200 0 1200 120z"
+          className="shape-fill"
+        ></path>
+      </svg> */}
+      <svg
+        className="absolute top-0 fill-white"
+        data-name="Layer 1"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1200 120"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M1200 120L0 16.48 0 0 1200 0 1200 120z"
+          className="shape-fill"
+        ></path>
+      </svg>
       {/* Content */}
       <div className="relative container flex items-center flex-col justify-center">
         <motion.div
@@ -41,7 +51,7 @@ const RecentBlogPosts = () => {
           transition={{ duration: 0.6 }}
           className="text-center flex items-center flex-col justify-center max-w-[700px] space-y-4"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-white">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mt-8">
             Recent Blog Post
           </h2>
           <p className="text-white text-lg tracking-wider">
